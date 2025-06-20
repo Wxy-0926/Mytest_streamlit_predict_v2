@@ -10,7 +10,7 @@ pd.set_option("display.unicode.east_asian_width", True)
 
 # 尝试加载数据，添加错误处理
 try:
-    insurance_df = pd.read_csv(r"D:\streamlit_env\insurance-chinese.csv", encoding='gbk')
+    insurance_df = pd.read_csv("insurance-chinese.csv", encoding='gbk')
     output = insurance_df['医疗费用']
     features = insurance_df[['年龄', '性别', 'BMI', '子女数量', '是否吸烟', '区域']]
     features = pd.get_dummies(features)
